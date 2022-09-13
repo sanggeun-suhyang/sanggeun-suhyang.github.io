@@ -53,10 +53,11 @@
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
+        <div id="moveHome"></div>
         <!-- <a href="index.html" class="logo float-left m-0">Style <span class="text-primary">.</span></a> -->
 
         <ul class="js-clone-nav d-none d-lg-inline-noone text-left site-menu">
-          <li class="active"><a href="index.html">Home</a></li>
+          <!-- <li class="active"><a href="index.html">Home</a></li>
           <li class="has-children">
             <a href="#">Pages</a>
             <ul class="dropdown">
@@ -80,11 +81,11 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="elements.html">Elements</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-
+          <li><a href="contact.html">Contact Us</a></li> -->
+          <li><a style="cursor: pointer;" onclick="moveInvitation();">초대의글</a></li>
           <li><a style="cursor: pointer;" onclick="movePhotoAlbum();">사진첩</a></li>
-          <li><a href="contact.html">오시는길</a></li>
-          <li><a href="contact.html">마음전하실곳</a></li>
+          <li><a style="cursor: pointer;" onclick="moveMap();">오시는길</a></li>
+          <li><a style="cursor: pointer;" onclick="moveCelebration();">마음전하실곳</a></li>
         </ul>
 
         <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-block" data-toggle="collapse" data-target="#main-navbar">
@@ -111,7 +112,7 @@
     </div>
   </div>
 
-  <div class="site-section">
+  <div class="site-section" id="moveInvitation">
     <div class="container">
       <div class="row align-items-center justify-content-around">
 
@@ -196,11 +197,11 @@
 
   
 
-  <div class="section-4">
+  <div class="section-4" id="movePhotoAlbum">
     <div class="container">
       <div class="row mb-4 align-items-center">
         <div class="col-6">
-          <h2 class="line-top" id="h2PhotoAlbum">사진첩</h2>
+          <h2 class="line-top">사진첩</h2>
           <div class="line my-3"></div>
         </div>
         <div class="col-6 text-right">
@@ -298,11 +299,11 @@
   </div>
 
 
-  <div class="section">
+  <div class="section" id="moveMap">
     <div class="container">
       <div class="row justify-content-center mb-4">
         <div class="col-lg-4">
-          <h2 id="h2Map">오시는길</h2>
+          <h2>오시는길</h2>
           <div class="line my-3"></div>
         </div>
         <div class="col-lg-4">
@@ -547,9 +548,11 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <h1>Let's Get Started</h1>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <p><a href="#" class="btn btn-primary">Get In Touch</a></p>
+          <p><i class="fa-solid fa-comment"></i>카카오톡 공유</p>
+          <p onclick="copyURL();"><i class="fa-solid fa-link"></i>청첩장 주소 복사</p>
+          <br />
+          <br />
+          <p><a href="#" class="btn btn-primary">처음으로</a></p>
         </div>
       </div>
     </div>
@@ -557,7 +560,7 @@
 
   <div class="site-footer">
     <div class="container">
-      <div class="row justify-content-between">
+      <!-- <div class="row justify-content-between">
         <div class="col-lg-4">
           <div class="widget">
             <h3>About</h3>
@@ -616,12 +619,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="row justify-content-center text-center copyright">
         <div class="col-md-8">
-          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
-          </p>
+          
         </div>
       </div>
     </div>
@@ -660,19 +662,45 @@
 
 
   <script src="js/custom.js"></script>
+  <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
 
   <script>
 
+  let moveInvitation = function(){
+    let offset = $("#moveInvitation").offset();
+    console.log(offset);
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
   let movePhotoAlbum = function(){
-    let offset = $("#h2PhotoAlbum").offset();
+    let offset = $("#movePhotoAlbum").offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
   }
 
   let moveMap = function(){
-    let offset = $("#h2Map").offset();
+    let offset = $("#moveMap").offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
   }
 
+  let moveHome = function(){
+    let offset = $("#moveHome").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let copyURL = function(){
+
+    var url = 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html';    // <a>태그에서 호출한 함수인 clip 생성
+    var textarea = document.createElement("textarea");  
+    //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
+
+    document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
+    url = window.document.location.href;  //url에는 현재 주소값을 넣어줌
+    textarea.value = url;  // textarea 값에 url를 넣어줌
+    textarea.select();  //textarea를 설정
+    document.execCommand("copy");   // 복사
+    document.body.removeChild(textarea); //extarea 요소를 없애줌
+    alert("청첩장 주소가 복사되었습니다.");
+  }
   </script>
 </body>
 </html>
