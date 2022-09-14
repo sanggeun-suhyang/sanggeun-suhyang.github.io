@@ -8,7 +8,8 @@
 * Facebook: https://web.facebook.com/Untree.co/
 */
 body {
-  font-family: "Crimson Text", serif;
+  /* font-family: "Crimson Text", serif; */
+  font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.5;
   font-size: 15px;
   color: #000000;
