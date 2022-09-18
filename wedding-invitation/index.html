@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
+
   <title>상근♥수향 모바일 청첩장</title>
 </head>
 <body>
@@ -82,10 +84,11 @@
           <li><a href="elements.html">Elements</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact Us</a></li> -->
-          <li><a style="cursor: pointer;" onclick="moveInvitation();">초대의글</a></li>
-          <li><a style="cursor: pointer;" onclick="movePhotoAlbum();">사진첩</a></li>
-          <li><a style="cursor: pointer;" onclick="moveMap();">오시는길</a></li>
-          <li><a style="cursor: pointer;" onclick="moveCelebration();">마음전하실곳</a></li>
+          <li><i class="fa-solid fa-envelope" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveInvitation();">초대의글</a></li>
+          <li><i class="fa-solid fa-camera" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="movePhotoAlbum();">사진첩</a></li>
+          <li><i class="fa-solid fa-calendar-days" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveMap();">결혼식날</a></li>
+          <li><i class="fa-solid fa-map-location-dot" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveMap();">오시는길</a></li>
+          <li><i class="fa-solid fa-heart" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCelebration();">마음전하실곳</a></li>
         </ul>
 
         <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-block" data-toggle="collapse" data-target="#main-navbar">
@@ -505,7 +508,7 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-7">
-          <h2 class="mb-4">Blog Posts</h2>
+          <h2 class="mb-4">마음전하실곳</h2>
           <div class="line my-3"></div>
         </div>
       </div>
@@ -671,7 +674,7 @@
 
 
   <script src="js/custom.js"></script>
-  <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
+
   <!-- 카카오 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>

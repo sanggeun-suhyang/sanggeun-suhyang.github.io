@@ -4,7 +4,7 @@ body {
   line-height: 1.5;
   font-size: 15px;
   color: $black;
-  background: #FFFFF6;
+  background: #FFFFFA;
   &:before {
     content: "";
     position: fixed;
@@ -145,7 +145,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   height:100%;  
   position:fixed;
   z-index:7100;
-  background: #FFFFF6;
+  background: #FFFFFA;
   top: 0;
   left: 0;
   right: 0;
