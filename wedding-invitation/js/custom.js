@@ -389,7 +389,7 @@ $(function(){
 			tl 
 			.set('.hero-heading > span > span > span > span', {y: "100%", transformStyle:"preserve-3d"})
 			.set('.sub-text, .js-line', {y: 20, autoAlpha: 0, transformStyle:"preserve-3d"})
-			.staggerFromTo('.hero-heading > span > span > span > span', 2, {opacity: 1, rotation: "20%", y:"100%"}, {opacity: 1, rotation: 0, y: "0%", ease: Expo.easeInOut}, 0.03, '+=0')
+			.staggerFromTo('.hero-heading > span > span > span > span', 2, {opacity: 1, rotation: "20%", y:"100%"}, {opacity: 1, rotation: 0, y: "0%", ease: Expo.easeInOut}, 0.3, '+=0')
 			.fromTo('.sub-text, .js-line', 1, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, ease: Expo.easeInOut }, '-=1')
 		}, 300);
 	};
