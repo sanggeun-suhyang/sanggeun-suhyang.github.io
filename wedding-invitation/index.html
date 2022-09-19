@@ -797,13 +797,34 @@
 
 
   function initMapWeddingHall(){
-    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-    var options = { //지도를 생성할 때 필요한 기본 옵션
-      center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-      level: 3 //지도의 레벨(확대, 축소 정도)
-    };
 
-    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    var markers = [
+      {
+          position: new kakao.maps.LatLng(33.450701, 126.570667)
+      },
+      {
+          position: new kakao.maps.LatLng(33.450001, 126.570467), 
+          text: '결혼식장-라마다웨딩호텔' // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
+      }
+    ];
+
+    var staticMapContainer  = document.getElementById('map'), // 이미지 지도를 표시할 div  
+        staticMapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 이미지 지도의 중심좌표
+            level: 3, // 이미지 지도의 확대 레벨
+            marker: markers // 이미지 지도에 표시할 마커 
+        };    
+
+    // 이미지 지도를 생성합니다
+    var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+
+    // var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    // var options = { //지도를 생성할 때 필요한 기본 옵션
+    //   center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+    //   level: 3 //지도의 레벨(확대, 축소 정도)
+    // };
+
+    // var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
   }
 
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
