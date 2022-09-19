@@ -67,7 +67,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 4px;
-  font-size: 14px; }
+  font-size: 20px; }
   .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none;
