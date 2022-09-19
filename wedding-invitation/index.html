@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad"></script>
 
   <title>상근♥수향 모바일 청첩장</title>
 
@@ -160,16 +161,70 @@
           </div>
 
         </div>
-        <div class="col-lg-5 mt-5">
+        <!-- <div class="col-lg-5 mt-5">
 
           <div>
             <i class="fa-solid fa-calendar-days"></i>
             <h2>결혼식날</h2>
-            <!-- <span class="d-inline-block">Wedding Days</span> -->
+            <span class="d-inline-block">Wedding Days</span>
 
             <div  class="line me-auto mb-3 mt-3"></div>
 
             <p class="line-top fig-2-text my-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div> -->
+        <div class="col-lg-5 mt-5">
+
+          <div>
+            <i class="fa-solid fa-book"></i>
+            <h2>정현종 &lt;방문객&gt;</h2>
+            <div  class="line me-auto mb-3 mt-3"></div>
+            <p class="line-top fig-2-text my-4">
+              사람이 온다는 건
+            </p>
+            <p class="line-top fig-2-text my-4">
+              실은 어마어마한 일이다.
+            </p>
+            <p class="line-top fig-2-text my-4">
+              그는
+            </p>
+            <p class="line-top fig-2-text my-4">
+              그의 과거와
+            </p>
+            <p class="line-top fig-2-text my-4">
+              현재와
+            </p>
+            <p class="line-top fig-2-text my-4">
+              그리고
+            </p>
+            <p class="line-top fig-2-text my-4">
+              그의 미래와 함께 오기 때문이다.
+            </p>  
+            <p class="line-top fig-2-text my-4">
+              한 사람의 일생이 오기 때문이다.
+            </p>  
+            <p class="line-top fig-2-text my-4">
+              부서지기 쉬운
+            </p>  
+            <p class="line-top fig-2-text my-4">
+              그래서 부서지기도 했을
+            </p>    
+            <p class="line-top fig-2-text my-4">
+              마음이 오는 것이다 - 그 갈피를
+            </p>    
+            <p class="line-top fig-2-text my-4">
+              아마 바람은 더듬어볼 수 있을
+            </p>     
+            <p class="line-top fig-2-text my-4">
+              마음,
+            </p>   
+            <p class="line-top fig-2-text my-4">
+              내 마음이 그런 바람을 흉내낸다면
+            </p>   
+            <p class="line-top fig-2-text my-4">
+              필경 환대가 될 것이다.
+            </p>
             <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
@@ -192,6 +247,7 @@
               <p>그는</p>
               <p>그의 과거와</p>
               <p>현재와</p>
+              <p>│</p>
             </div>
           </div>
         </div>
@@ -209,6 +265,7 @@
               <p>부서지기 쉬운</p>
               <p>그래서 부서지기도 했을</p>
               <p>마음이 오는 것이다 - 그 갈피를</p>
+              <p>│</p>
             </div>
           </div>
         </div>
@@ -352,15 +409,7 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-4">
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-
-          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p>Far far away, behind the word mountains, far from the countries.</p>
-        </div>
+        <div id="map" style="width:500px;height:400px;"></div>
       </div>
     </div>
   </div>
@@ -432,11 +481,42 @@
         </div>
         <div class="col-lg-4">
 
-          <h2 class="mb-4">Don't miss the new season 2021 lookbook</h2>
+          <h2 class="mb-4">정현종 &lt;방문객&gt;</h2>
           <div class="line my-3"></div>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p>
+            사람이 온다는 건
 
-          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            실은 어마어마한 일이다.
+            
+            그는
+            
+            그의 과거와
+            
+            현재와
+            
+            그리고
+            
+            그의 미래와 함께 오기 때문이다.
+            
+            한 사람의 일생이 오기 때문이다.
+            
+            부서지기 쉬운
+            
+            그래서 부서지기도 했을
+            
+            마음이 오는 것이다 - 그 갈피를
+            
+            아마 바람은 더듬어볼 수 있을
+            
+            마음,
+            
+            내 마음이 그런 바람을 흉내낸다면
+            
+            필경 환대가 될 것이다.
+
+          </p>
+
+          
         </div>
       </div>
     </div>
@@ -709,6 +789,22 @@
   <!-- 카카오 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>
+
+
+  $( document ).ready(function() {
+      initMapWeddingHall();
+  });
+
+
+  function initMapWeddingHall(){
+    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+      center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+      level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+  }
 
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('c3f032518f57e515c1fdcb4b23b75cad');
