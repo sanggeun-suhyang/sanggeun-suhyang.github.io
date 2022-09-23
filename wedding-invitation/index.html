@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad"></script>
+  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad"></script> -->
 
   <title>상근♥수향 모바일 청첩장</title>
 
@@ -56,6 +56,13 @@
 .accountItem{
   padding:5px;
   margin:5px;
+}
+
+.telItem{
+  text-align: center;
+  float: left;
+  width:33%;
+  padding:20px
 }
 
 </style>
@@ -171,7 +178,7 @@
             <div data-jarallax-element="-100" class="jarallax">
               <i class="fa-solid fa-envelope"></i>
               <h2>초대의글</h2>
-              <span class="d-inline-block">Invitation</span>
+              <!-- <span class="d-inline-block">Invitation</span> -->
               <img src="images/Invitation.jpg" alt="Image" class="img-fluid my-3 my-lg-5">
               <p class="line-top fig-2-text mb-4">세상에서 가장 빼어나고 (秀) 향기로운 (香)</p>
               <p class="line-top fig-2-text mb-4">두 사람이 만나</p>
@@ -184,74 +191,57 @@
           </div>
 
         </div>
-        <!-- <div class="col-lg-5 mt-5">
-
-          <div>
-            <i class="fa-solid fa-calendar-days"></i>
-            <h2>결혼식날</h2>
-            <span class="d-inline-block">Wedding Days</span>
-
-            <div  class="line me-auto mb-3 mt-3"></div>
-
-            <p class="line-top fig-2-text my-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div> -->
-
         <div class="col-lg-5 mt-5">
 
           <div>
-            <i class="fa-solid fa-book"></i>
-            <h2>정현종 &lt;방문객&gt;</h2>
+            <i class="fa-sharp fa-solid fa-phone"></i>
+            <h2>연락하실곳</h2>
+            <!-- <span class="d-inline-block">Wedding Days</span> -->
+
             <div  class="line me-auto mb-3 mt-3"></div>
-            <div style="padding:2px; text-align: center; margin: auto;">
-              <p class="line-top fig-2-text my-4">
-                사람이 온다는 건
-              </p>
-              <p class="line-top fig-2-text my-4">
-                실은 어마어마한 일이다.
-              </p>
-              <p class="line-top fig-2-text my-4">
-                그는
-              </p>
-              <p class="line-top fig-2-text my-4">
-                그의 과거와
-              </p>
-              <p class="line-top fig-2-text my-4">
-                현재와
-              </p>
-              <p class="line-top fig-2-text my-4">
-                그리고
-              </p>
-              <p class="line-top fig-2-text my-4">
-                그의 미래와 함께 오기 때문이다.
-              </p>  
-              <p class="line-top fig-2-text my-4">
-                한 사람의 일생이 오기 때문이다.
-              </p>  
-              <p class="line-top fig-2-text my-4">
-                부서지기 쉬운
-              </p>  
-              <p class="line-top fig-2-text my-4">
-                그래서 부서지기도 했을
-              </p>    
-              <p class="line-top fig-2-text my-4">
-                마음이 오는 것이다 - 그 갈피를
-              </p>    
-              <p class="line-top fig-2-text my-4">
-                아마 바람은 더듬어볼 수 있을
-              </p>     
-              <p class="line-top fig-2-text my-4">
-                마음,
-              </p>   
-              <p class="line-top fig-2-text my-4">
-                내 마음이 그런 바람을 흉내낸다면
-              </p>   
-              <p class="line-top fig-2-text my-4">
-                필경 환대가 될 것이다.
-              </p>
+
+            <!-- <p class="line-top fig-2-text my-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
+            <div style="text-align: center; padding: 5px;">
+              <b>신랑측</b>
             </div>
-            <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid">
+            <div style="padding:5px;">
+              <div class="telItem">
+                <label>부</label> <br/>
+                <label>최창이</label> <br/>
+                <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-3781-7340'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-3781-7340'"></i>
+              </div>
+              <div class="telItem">
+                <label>모</label> <br/>
+                <label>김은숙</label> <br/>
+                <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-7166-7340'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-7166-7340'"></i>
+              </div>
+              <div class="telItem">
+                <label>차남</label> <br/>
+                <label>최상근</label> <br/>
+                <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-6322-7340'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-6322-7340'"></i>
+              </div>
+            </div>
+            
+
+            <div style="text-align: center; padding: 5px;">
+              <b>신부측</b>
+            </div>
+            <div class="telItem">
+              <label>부</label> <br/>
+              <label>정지현</label> <br/>
+              <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-9011-6038'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-9011-6038'"></i>
+            </div>
+            <div class="telItem">
+              <label>모</label> <br/>
+              <label>김경숙</label> <br/>
+              <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-9015-0716'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-9015-0716'"></i>
+            </div>
+            <div class="telItem">
+              <label>차녀</label> <br/>
+              <label>정수향</label> <br/>
+              <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-3690-6038'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-3690-6038'"></i>
+            </div>
+            <!-- <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid"> -->
           </div>
         </div>
       </div>
@@ -268,12 +258,10 @@
               <img src="images/wedding1.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="text custom-text">
-              <p>사람이 온다는 건</p>
-              <p>실은 어마어마한 일이다</p>
-              <p>그는</p>
-              <p>그의 과거와</p>
-              <p>현재와</p>
-              <p>│</p>
+              <p>결혼이란</p>
+              <p>남자의 자유를 걸고,</p>
+              <p>여자의 행복을 거는 것</p>
+              <h2> - 마담 드 류우 -</h2>
             </div>
           </div>
         </div>
@@ -284,14 +272,10 @@
               <img src="images/wedding2.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="text custom-text">
-              <!-- <h2>Clothing</h2> -->
-              <p>그리고</p>
-              <p>그의 미래와 함께 오기 때문이다.</p>
-              <p>한 사람의 일생이 오기 때문이다.</p>
-              <p>부서지기 쉬운</p>
-              <p>그래서 부서지기도 했을</p>
-              <p>마음이 오는 것이다 - 그 갈피를</p>
-              <p>│</p>
+              <p>결혼전에는 눈을 크게 뜨고</p> 
+              <p>결혼 후에는 반쯤 감아라</p>
+              <h2>- 토머스 플러 -</h2>
+              
             </div>
           </div>
         </div>
@@ -302,12 +286,13 @@
               <img src="images/wedding3.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="text custom-text">
-
-              <p>아마 바람은 더듬어볼 수 있을</p>
-              <p>마음,</p>
-              <p>내 마음이 그런 바람을 흉내낸다면</p>
-              <p>필경 환대가 될 것이다.</p>
-              <h2>방문객 -정현종</h2>
+              <p>행복한 결혼 생활에서 </p>
+              <p>중요한 것은</p>
+              <p>서로 얼마나</p>
+              <p>잘 맞는가 보다</p>
+              <p>다른 점을 어떻게</p>
+              <p>극복해 나가느냐이다.</p>
+              <h2>- 톨스토이 -</h2>
             </div>
           </div>
         </div>
@@ -488,6 +473,134 @@
       </div>
     </div>
   </div>
+
+  <div class="section" id="movePoem">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-4">
+          <i class="fa-solid fa-book"></i>
+          <h2>정현종 &lt;방문객&gt;</h2>
+          <div class="line my-3"></div>
+        </div>
+        <div class="col-lg-4">
+        </div>
+      </div>
+      <div class="row justify-content-center" style="padding:20px;">
+        <div style="padding:2px; text-align: center; margin: auto;">
+          <p class="line-top fig-2-text my-4">
+            사람이 온다는 건
+          </p>
+          <p class="line-top fig-2-text my-4">
+            실은 어마어마한 일이다.
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그는
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그의 과거와
+          </p>
+          <p class="line-top fig-2-text my-4">
+            현재와
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그리고
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그의 미래와 함께 오기 때문이다.
+          </p>  
+          <p class="line-top fig-2-text my-4">
+            한 사람의 일생이 오기 때문이다.
+          </p>  
+          <p class="line-top fig-2-text my-4">
+            부서지기 쉬운
+          </p>  
+          <p class="line-top fig-2-text my-4">
+            그래서 부서지기도 했을
+          </p>    
+          <p class="line-top fig-2-text my-4">
+            마음이 오는 것이다 - 그 갈피를
+          </p>    
+          <p class="line-top fig-2-text my-4">
+            아마 바람은 더듬어볼 수 있을
+          </p>     
+          <p class="line-top fig-2-text my-4">
+            마음,
+          </p>   
+          <p class="line-top fig-2-text my-4">
+            내 마음이 그런 바람을 흉내낸다면
+          </p>   
+          <p class="line-top fig-2-text my-4">
+            필경 환대가 될 것이다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="section" id="movePoem">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-4">
+
+          <div>
+            <i class="fa-solid fa-book"></i>
+            <h2>정현종 &lt;방문객&gt;</h2>
+            <div  class="line me-auto mb-3 mt-3"></div>
+            <div style="padding:2px; text-align: center; margin: auto;">
+              <p class="line-top fig-2-text my-4">
+                사람이 온다는 건
+              </p>
+              <p class="line-top fig-2-text my-4">
+                실은 어마어마한 일이다.
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그는
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그의 과거와
+              </p>
+              <p class="line-top fig-2-text my-4">
+                현재와
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그리고
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그의 미래와 함께 오기 때문이다.
+              </p>  
+              <p class="line-top fig-2-text my-4">
+                한 사람의 일생이 오기 때문이다.
+              </p>  
+              <p class="line-top fig-2-text my-4">
+                부서지기 쉬운
+              </p>  
+              <p class="line-top fig-2-text my-4">
+                그래서 부서지기도 했을
+              </p>    
+              <p class="line-top fig-2-text my-4">
+                마음이 오는 것이다 - 그 갈피를
+              </p>    
+              <p class="line-top fig-2-text my-4">
+                아마 바람은 더듬어볼 수 있을
+              </p>     
+              <p class="line-top fig-2-text my-4">
+                마음,
+              </p>   
+              <p class="line-top fig-2-text my-4">
+                내 마음이 그런 바람을 흉내낸다면
+              </p>   
+              <p class="line-top fig-2-text my-4">
+                필경 환대가 될 것이다.
+              </p>
+            </div>
+            <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
 
 
   <!-- <div class="section">
@@ -820,8 +933,8 @@
 
 
   $( document ).ready(function() {
-      initKAKAO();
-      initMapWeddingHall();
+      //initKAKAO();
+      //initMapWeddingHall();
       initDrawHeart();
   });
 
