@@ -671,7 +671,7 @@
           <i class="fa-solid fa-calendar-days"></i>
           <h2 class="mb-4">결혼식날</h2>
           <div class="line my-3"></div>
-          최상근<label style="color:red;">♥</label>정수향 결혼식 1일전
+          최상근<label style="color:red;">♥</label>정수향 결혼식 <b id="weddingDday"></b>일전
         </div>
       </div>
     </div>
@@ -917,6 +917,7 @@
   <script src="js/jquery.fancybox.min.js"></script>
 
   <script src="js/jquery.lettering.js"></script>
+  <script src="js/moment.js"></script>
 
 
   <script src="js/TweenMax.min.js"></script>
@@ -936,8 +937,16 @@
       initKAKAO();
       initMapWeddingHall();
       initDrawHeart();
+      initWeddingDay();
   });
 
+  let initWeddingDay = function(){
+
+    let now = moment().format('YYYY-MM-DD'); 
+    let weddingDay = moment('2022-11-27', 'YYYY-MM-DD');
+
+    $("#weddingDday").text(weddingDay.diff(now, 'days'));
+  };
 
   function initMapWeddingHall(){
 
