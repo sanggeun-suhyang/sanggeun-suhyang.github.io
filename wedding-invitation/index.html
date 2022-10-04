@@ -105,10 +105,11 @@ body {
 }
 
 .calendar {
-	background: #000000b5;
+	/* background: #000000b5; */
+  background: #000;
 	border-radius: 4px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-	height: 440px;
+	height: 470px;
   perspective: 1000;
 	transition: .9s;
 	transform-style: preserve-3d;
@@ -120,16 +121,20 @@ body {
 	transform: rotateY(0deg);
 }
 
+.current-month{
+  margin-top: 20px;
+}
+
 .current-date {
 	border-bottom: 1px solid #E93D6D;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 5px 30px;
 }
 
 .current-date h1 {
 	color: #dfebed;
-	font-size: 1.4em;
+	font-size: 21px;
 	font-weight: 300;
 }
 
@@ -656,12 +661,12 @@ body {
 
         <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
           <div class="blog_entry">
-            <a href="javascript:void(0);"><img src="images/lovestory2.jpg" class="img-fluid"></a>
+            <a href="javascript:void(0);"><img src="images/lovestory4.jpg" class="img-fluid"></a>
             <div class="p-4 bg-white">
               <h3><a href="javascript:void(0);">우리의 인연</a></h3>
               <span class="date">2019년 11월</span>
-              <p>그렇게 8년이란 시간이 흘렀습니다.</p>
-              <p>앞으론 평생 못볼줄 알았는데 다시 만날 기회가 생겼고 연인이되었습니다.</p>
+              <p>그렇게 8년이란 시간이 흐른뒤</p>
+              <p>다시 만날 기회가 생겼고 우리는 연인이되었습니다.</p>
               <p>우리는 인연이었나 봅니다.</p>
               <!-- <p class="more"><a href="#">Read more...</a></p> -->
             </div>
