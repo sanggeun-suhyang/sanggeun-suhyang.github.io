@@ -646,7 +646,8 @@ body {
             <div class="p-4 bg-white">
               <h3><a href="javascript:void(0);">우리의 첫만남</a></h3>
               <span class="date">2011년 3월</span>
-              <p>우리 두사람은 대학시절 흔히 말하는 복학생 오빠 새내기 여학생 사이로 처음 만났습니다.</p>
+              <p>우리 두사람은 대학시절 우스갯 소리로 말하는</p>
+              <p>복학생 오빠 새내기 여학생 사이로 처음 만났습니다.</p>
               <p>서로에게 호감이 있었지만 연인으로까진 발전하진 못했죠.</p>
               <!-- <p class="more"><a href="#">Read more...</a></p> -->
             </div>
@@ -965,14 +966,14 @@ body {
   <div class="section">
     <div class="container">
       <div class="row justify-content-around align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="padding-bottom:30px">
           <div>
             <!-- calendar -->
             <div class="container-calendar">
               <div class="calendar">
                 <div class="front">
                   <div class="current-date">
-                    <h1>2022년 11월 27일 일요일</h1>
+                    <h1>2022년 11월 27일 일요일 오후 3시 30분</h1>
                     <!-- <h1>27일 일요일</h1>	 -->
                   </div>
 
@@ -1097,7 +1098,7 @@ body {
           <i class="fa-solid fa-calendar-days"></i>
           <h2 class="mb-4">결혼식날</h2>
           <div class="line my-3"></div>
-          최상근<label style="color:#E93D6D;">♥</label>정수향 결혼식 <b id="weddingDday"></b>일전
+          최상근<label style="color:#E93D6D;">♥</label>정수향 결혼식 <b id="weddingDday"></b> <label id="weddingDday2">일전</label>
         </div>
       </div>
     </div>
@@ -1336,8 +1337,11 @@ body {
 
     let now = moment().format('YYYY-MM-DD'); 
     let weddingDay = moment('2022-11-27', 'YYYY-MM-DD');
+    //let weddingDay = moment('2022-10-05', 'YYYY-MM-DD');
+    let diffDay = weddingDay.diff(now, 'days');
 
-    $("#weddingDday").text(weddingDay.diff(now, 'days'));
+    $("#weddingDday").text(diffDay == 0 ? "오늘" : diffDay);
+    if(diffDay == 0) $("#weddingDday2").text("");
   };
 
   function initMapWeddingHall(){
