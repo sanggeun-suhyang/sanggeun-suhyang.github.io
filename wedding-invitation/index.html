@@ -106,7 +106,8 @@ body {
 
 .calendar {
 	/* background: #000000b5; */
-  background: #000;
+  /* background: #000; */
+  background:#FFFFFA;
 	border-radius: 4px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
 	height: 470px;
@@ -130,16 +131,17 @@ body {
 	display: flex;
 	justify-content: space-around;
 	padding: 5px 30px;
+  
 }
 
 .current-date h1 {
-	color: #dfebed;
+	/* color: #dfebed; */
 	font-size: 21px;
-	font-weight: 300;
+	font-weight: bold;
 }
 
 .week-days {
-	color: #dfebed;
+	/* color: #dfebed; */
 	display: flex;
 	justify-content: space-between;
 	font-weight: 600;
@@ -153,7 +155,7 @@ body {
 }
 
 .weeks {
-	color: #fff;
+	/* color: #fff; */
 	display: flex;
 	flex-direction: column;
 	padding: 5px 30px;
@@ -1330,12 +1332,18 @@ body {
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>
 
+  const url = 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html';    // <a>태그에서 호출한 함수인 clip 생성
 
   $( document ).ready(function() {
       initKAKAO();
       initDrawHeart();
       initWeddingDay();
       initMapWeddingHall2();
+
+      addEventListener('resize', (event) => {
+        window.location.href = url;
+      });
+
   });
 
   let initWeddingDay = function(){
@@ -1406,7 +1414,7 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
 
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;">상근♥수향<br/>결혼식장</div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">상근 <label style="color:red;">♥</label>수향<br/>결혼식장</div>'
         });
         infowindow.open(map, marker);
 
@@ -1462,7 +1470,7 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
 
   let copyURL = function(){
 
-    var url = 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html';    // <a>태그에서 호출한 함수인 clip 생성
+    
     var textarea = document.createElement("textarea");  
     //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
 
