@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
   <meta name="author" content="Untree.co">
   <link rel="shortcut icon" href="images/wedding_shorcut_icon.png">
 
@@ -50,12 +50,12 @@
 }
 
 .accountInfo{
-  float:left;
+  display: flex; float:left;
 }
 
-.accountItem{
-  padding:5px;
-  margin:5px;
+.accountBtn{
+  padding:10px 10px 10px 10px;
+  margin:auto;
 }
 
 .telItem{
@@ -166,7 +166,7 @@ body {
 	font-size: 1.2em;
 	font-weight: 300;
 	justify-content: space-between;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	width: 100%;
 }
 
@@ -753,7 +753,7 @@ body {
       </div>
       <div class="row justify-content-center mb-4">
         <div class="col-lg-8">
-          <b>예식장 주소</b>
+          <b>예식장 주소</b> <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAddress()">복사</a>
           <div class="mapDiv">
             <p>라마다 서울 신도림 호텔</p>
             <p>서울시 구로구 경인로 624 (신도림동 427-3)</p>
@@ -1134,24 +1134,32 @@ body {
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_1">
               <div class="accordion-body">
                 <div class="accountInfo">
-                  <div class="accountItem">
-                    <b>최창이 </b> <label> 하나은행&nbsp;</label><label id="menF">064-18-43135-9</label>
-                  </div>
-                  <div class="accountItem">
-                    <b>김은숙 </b> <label> 하나은행&nbsp;</label><label id="menM">620-229085-629</label>
-                  </div>
-                  <div class="accountItem">
-                    <b>최상근 </b> <label> 신한은행&nbsp;</label><label id="men">110-237-002117</label>
-                  </div>
-                </div>
-                <div class="accountBtn">
-                  <div class="accountItem">
+                  <div class="">
+                    <b>최창이</b>
+                    <br />
+                    <label>하나은행&nbsp;</label><label id="menF">064-18-43135-9</label>
+                  </div>  
+                  <div class="accountBtn">
                     <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('menF')">복사</a>
                   </div>
-                  <div class="accountItem">
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>김은숙</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="menM">620-229085-629</label>
+                  </div>  
+                  <div class="accountBtn">
                     <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('menM')">복사</a>
                   </div>
-                  <div class="accountItem">
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>최상근</b>
+                    <br/>
+                    <label>신한은행&nbsp;</label><label id="men">110-237-002117&nbsp;</label>
+                  </div>  
+                  <div class="accountBtn">
                     <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('men')">복사</a>
                   </div>
                 </div>
@@ -1166,24 +1174,32 @@ body {
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_1">
               <div class="accordion-body">
                 <div class="accountInfo">
-                  <div class="accountItem">
-                    <b>정지현 </b> <label> 하나은행&nbsp;</label><label id="womanF">490-910352-88207</label>
-                  </div>
-                  <div class="accountItem">
-                    <b>김경숙 </b> <label> 하나은행&nbsp;</label><label id="womanM">490-910352-91507</label>
-                  </div>
-                  <div class="accountItem">
-                    <b>정수향 </b> <label> 하나은행&nbsp;</label><label id="woman">437-910168-54407</label>
-                  </div>
-                </div>
-                <div class="accountBtn">
-                  <div class="accountItem">
+                  <div class="">
+                    <b>정지현</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="womanF">490-910352-88207</label>
+                  </div>  
+                  <div class="accountBtn">
                     <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanF')">복사</a>
                   </div>
-                  <div class="accountItem">
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>김경숙</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="womanM">490-910352-91507&nbsp;</label>
+                  </div>  
+                  <div class="accountBtn">
                     <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanM')">복사</a>
                   </div>
-                  <div class="accountItem">
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>정수향</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="woman">437-910168-54407</label>
+                  </div>  
+                  <div class="accountBtn">
                     <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('woman')">복사</a>
                   </div>
                 </div>
@@ -1455,12 +1471,11 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
   let copyAccount = function(person){
 
     let account = "";
-    account = $("#" + person).text();
+    account = $("#" + person).text().trim();
     var textarea = document.createElement("textarea");  
     //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
 
     document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
-    url = window.document.location.href;  //url에는 현재 주소값을 넣어줌
     textarea.value = account;  // textarea 값에 url를 넣어줌
     textarea.select();  //textarea를 설정
     document.execCommand("copy");   // 복사
@@ -1469,6 +1484,22 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
 
   }
 
+  let copyAddress = function(person){
+
+    let address = "서울시 구로구 경인로 624";
+    var textarea = document.createElement("textarea");  
+    //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
+
+    document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
+    textarea.value = address;  // textarea 값에 url를 넣어줌
+    textarea.select();  //textarea를 설정
+    document.execCommand("copy");   // 복사
+    document.body.removeChild(textarea); //extarea 요소를 없애줌
+    alert("예식장 주소가 복사되었습니다.");
+
+  }
+
+
   let copyURL = function(){
 
     
@@ -1476,7 +1507,7 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
     //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
 
     document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
-    url = window.document.location.href;  //url에는 현재 주소값을 넣어줌
+    //url = window.document.location.href;  //url에는 현재 주소값을 넣어줌
     textarea.value = url;  // textarea 값에 url를 넣어줌
     textarea.select();  //textarea를 설정
     document.execCommand("copy");   // 복사
