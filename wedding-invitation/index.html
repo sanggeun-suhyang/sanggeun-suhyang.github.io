@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad&libraries=services"></script>
+  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad&libraries=services"></script> -->
 
   <title>상근♥수향 모바일 청첩장</title>
 
@@ -1433,23 +1433,38 @@ body {
   const url = 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html';    // <a>태그에서 호출한 함수인 clip 생성
 
   $( document ).ready(function() {
-      initKAKAO();
+      //initKAKAO();
       initDrawHeart();
       initWeddingDay();
-      initMapWeddingHall2();
+      //initMapWeddingHall2();
 
-      addEventListener('resize', (event) => {
-        //window.location.href = url;
-      });
-
+      
       //크롬이 아닐 경우
-      var agent = navigator.userAgent.toLowerCase(); 
-      if (agent.indexOf("chrome") == -1) { //
+      var agent = window.navigator.userAgent.toLowerCase(); 
+      switch (true){
+        case agent.indexOf("edge") > -1:
         $("#btnPlayMusic").trigger("click");
+        braek;
+        case agent.indexOf("edg/") > -1:
+        //$("#btnPlayMusic").trigger("click");
+        break;
+        case agent.indexOf("chrome") > -1 && !!window.chrome:
+        //$("#btnPlayMusic").trigger("click");
+        break;
+        default:
+        $("#btnPlayMusic").trigger("click");
+        break;
       }
-      else{
-        console.log('this is chrome browser');
-      }
+
+
+      // console.log(agent);
+      // if (agent.indexOf("chrome") > -1 && !!window.chrome) { //
+      //   console.log('this is chrome browser');
+      // }
+      // else{
+      //   console.log('this is not chrome browser');
+      //   $("#btnPlayMusic").trigger("click");
+      // }
   });
 
   let playMusic = function(){
