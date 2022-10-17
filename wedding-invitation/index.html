@@ -341,7 +341,6 @@ body {
     <div class="site-mobile-menu-body"></div>
   </div>
 
-  <div id="moveHome"></div>
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
@@ -383,7 +382,9 @@ body {
           <li><i class="fa-solid fa-calendar-days" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCalendar();">결혼식날</a></li>
           <li><i class="fa-solid fa-heart" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCelebration();">마음전하실곳</a></li>
         </ul>
-
+        <div style="float:left">
+          <button id="btnPlayMusic" style="display:none;" onclick="playMusic();">플레이</button>
+        </div>
         <div style="float:right; width:28px;">
           <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-block" data-toggle="collapse" data-target="#main-navbar" style="position:fixed; z-index:999;">
             <span></span>
@@ -1441,7 +1442,18 @@ body {
         //window.location.href = url;
       });
 
+      $("#btnPlayMusic").trigger("click");
   });
+
+  let playMusic = function(){
+
+    var audio = new Audio("./mp3/Taylor Swift_Love Story.mp3");
+    audio.load();
+	  audio.volume = 1;
+	  audio.play();
+    audio.autoplay = true;
+  }
+
 
   let initWeddingDay = function(){
 
