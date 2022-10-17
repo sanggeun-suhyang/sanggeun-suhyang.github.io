@@ -383,7 +383,8 @@ body {
           <li><i class="fa-solid fa-heart" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCelebration();">마음전하실곳</a></li>
         </ul>
         <div style="float:left">
-          <a id="btnPlayMusic" onclick="playMusic();" style="position:fixed; z-index:999;font-size: 25px;"><i class="fa-solid fa-circle-play"></i></a>
+          <a id="btnPlayMusic" onclick="playMusic();" style="position:fixed; z-index:999;font-size: 25px;display:none;"><i class="fa-solid fa-circle-play"></i></a>
+          <a id="btnPauseMusic" onclick="pauseMusic();" style="position:fixed; z-index:999;font-size: 25px;display: none;;"><i class="fa-solid fa-circle-pause"></i></a>
         </div>
         <div style="float:right; width:28px;">
           <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-block" data-toggle="collapse" data-target="#main-navbar" style="position:fixed; z-index:999;">
@@ -423,18 +424,18 @@ body {
     </div>
   </div>
 
-  <div class="site-section" id="moveInvitation">
+  <div class="site-section">
     <div class="container">
       <div class="row align-items-center justify-content-around">
 
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-4 text-center" id="moveInvitation">
 
-          <div >
+          <div  >
             <div data-jarallax-element="-100" class="jarallax">
               <i class="fa-solid fa-envelope"></i>
               <h2>초대의글</h2>
               <!-- <span class="d-inline-block">Invitation</span> -->
-              <img src="images/semi/wedding1.webp" alt="Image" class="img-fluid my-3 my-lg-5">
+              <img src="images/final/invitation.webp" alt="Image" class="img-fluid my-3 my-lg-5">
               <p class="line-top fig-2-text mb-4">세상에서 가장 빼어나고 (秀) 향기로운 (香)</p>
               <p class="line-top fig-2-text mb-4">두 사람이 만나</p>
               <p class="line-top fig-2-text mb-4">서로의 (相) 뿌리가 (根) 되어</p>
@@ -446,7 +447,7 @@ body {
           </div>
 
         </div>
-        <div class="col-lg-5 mt-5">
+        <div class="col-lg-5 mt-5" id="moveContact">
 
           <div>
             <i class="fa-sharp fa-solid fa-phone"></i>
@@ -510,7 +511,7 @@ body {
         <div class="col-12 col-md-6 col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="service-2 d-flex align-items-md-center">
             <div class="image">
-              <img src="images/semi/wedding2.webp" alt="Image" class="img-fluid">
+              <img src="images/final/none1.webp" alt="Image" class="img-fluid">
             </div>
             <div class="text custom-text">
               <p>결혼이란</p>
@@ -524,7 +525,7 @@ body {
         <div class="col-12 col-md-6 col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="service-2 d-flex align-items-md-center">
             <div class="image">
-              <img src="images/wedding2.jpg" alt="Image" class="img-fluid">
+              <img src="images/final/none2.webp" alt="Image" class="img-fluid">
             </div>
             <div class="text custom-text">
               <p>결혼전에는 눈을 크게 뜨고</p> 
@@ -538,7 +539,7 @@ body {
         <div class="col-12 col-md-6 col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="service-2 d-flex align-items-md-center">
             <div class="image">
-              <img src="images/wedding3.jpg" alt="Image" class="img-fluid">
+              <img src="images/final/none3.webp" alt="Image" class="img-fluid">
             </div>
             <div class="text custom-text">
               <p>행복한 결혼 생활에서 </p>
@@ -565,100 +566,263 @@ body {
           <div class="line my-3"></div>
         </div>
         <div class="col-6 text-right">
-          <a href="#" class="custom-prev-v2 js-custom-prev-v2">이전</a>
+          <a href="javascript:void(0);" class="custom-prev-v2 js-custom-prev-v2">이전</a>
           <span class="mx-3">/</span>
-          <a href="#" class="custom-next-v2 js-custom-next-v2">다음</a>
+          <a href="javascript:void(0);" class="custom-next-v2 js-custom-next-v2">다음</a>
         </div>
       </div>
 
       <div>
         <div class="owl-4-slider owl-carousel">
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_1.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo1.webp" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_2.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo2.webp" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Man White Blazer</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_3.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo3.webp" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_4.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo4.webp" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_5.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo5.webp" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_6.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo6.webp" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_7.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo7.jpg" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
           <div class="product">
-            <a href="#" class="d-block">
-              <img src="images/photo_album_8.jpg" alt="Image" class="img-fluid">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo8.jpg" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
-              <h3>Woman Floral Dress</h3>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
             </div>
           </div>
-
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo9.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo10.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo11.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo12.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo13.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo14.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo15.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo16.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo17.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo18.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo19.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo20.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo21.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo22.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo23.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo24.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo25.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo26.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo27.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              <!-- <h3>Woman Floral Dress</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="moveLoveStory">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-7">
@@ -670,7 +834,7 @@ body {
       <div class="row">
         <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
           <div class="blog_entry">
-            <a href="javascript:void(0);"><img src="images/lovestory1.jpg" alt="" class="img-fluid"></a>
+            <a href="javascript:void(0);"><img src="images/final/lovestory1.jpg" alt="" class="img-fluid"></a>
             <div class="p-4 bg-white">
               <h3><a href="javascript:void(0);">우리의 첫만남</a></h3>
               <span class="date">2011년 3월</span>
@@ -684,7 +848,7 @@ body {
 
         <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
           <div class="blog_entry">
-            <a href="javascript:void(0);"><img src="images/lovestory4.jpg" class="img-fluid"></a>
+            <a href="javascript:void(0);"><img src="images/final/lovestory2.jpg" class="img-fluid"></a>
             <div class="p-4 bg-white">
               <h3><a href="javascript:void(0);">우리의 인연</a></h3>
               <span class="date">2019년 11월</span>
@@ -698,7 +862,7 @@ body {
 
         <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
           <div class="blog_entry">
-            <a href="javascript:void(0);"><img src="images/lovestory3.jpg" class="img-fluid"></a>
+            <a href="javascript:void(0);"><img src="images/final/lovestory3.webp" class="img-fluid"></a>
             <div class="p-4 bg-white">
               <h3><a href="javascript:void(0);">우리의 새로운 시작</a></h3>
               <span class="date">2022년 11월</span>
@@ -715,18 +879,18 @@ body {
     </div>
   </div>
   
-  <div class="section">
+  <div class="section" id="movePoem">
     <div class="container">
       <div class="row justify-content-around align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="image-stack-v2">
             <div class="image-stack__item image-stack__item--top">
               <div data-jarallax-element="-100" class="jarallax">
-                <img src="images/poem2.jpg" alt="Image" class="img-fluid">
+                <img src="images/final/poem2.jpg" alt="Image" class="img-fluid">
               </div>
             </div>
             <div class="image-stack__item image-stack__item--bottom">
-              <img src="images/poem1.jpg" alt="Image" class="img-fluid">
+              <img src="images/final/poem1.jpg" alt="Image" class="img-fluid">
             </div>
           </div>
         </div>
@@ -991,7 +1155,7 @@ body {
   </div> -->
 
 
-  <div class="section">
+  <div class="section" id="moveCalendar">
     <div class="container">
       <div class="row justify-content-around align-items-center">
         <div class="col-lg-6" style="padding-bottom:30px">
@@ -1134,7 +1298,7 @@ body {
   </div>
 
 
-  <div class="container pb-5 mb-5 border-bottom">
+  <div class="container pb-5 mb-5 border-bottom" id="moveCelebration">
     <div class="row justify-content-around">
       <div class="col-lg-4 mb-4 mb-lg-0">
         <i class="fa-solid fa-heart"></i>
@@ -1437,13 +1601,15 @@ body {
       initDrawHeart();
       initWeddingDay();
       initMapWeddingHall2();
-
+      initMusic();
       
       //크롬이 아닐 경우
       var agent = window.navigator.userAgent.toLowerCase(); 
       switch (true){
         case agent.indexOf("edge") > -1:
         $("#btnPlayMusic").trigger("click");
+        $("#btnPlayMusic").hide();
+        $("#btnPauseMusic").show();
         braek;
         case agent.indexOf("edg/") > -1:
         //$("#btnPlayMusic").trigger("click");
@@ -1453,6 +1619,8 @@ body {
         break;
         default:
         $("#btnPlayMusic").trigger("click");
+        $("#btnPlayMusic").hide();
+        $("#btnPauseMusic").show();
         break;
       }
 
@@ -1467,15 +1635,29 @@ body {
       // }
   });
 
+  var audio = new Audio("./mp3/Taylor Swift_Love Story.mp3");;
+
+  let initMusic = function(){
+    $("#btnPlayMusic").show();
+    audio.load();
+	  audio.volume = 1;
+    audio.autoplay = true;
+  }
+
   let playMusic = function(){
 
     console.log('playMusic');
-
-    var audio = new Audio("./mp3/Taylor Swift_Love Story.mp3");
-    audio.load();
-	  audio.volume = 1;
 	  audio.play();
-    audio.autoplay = true;
+    $("#btnPlayMusic").hide();
+    $("#btnPauseMusic").show();
+  }
+
+  let pauseMusic = function(){
+
+    console.log('pauseMusic');
+    audio.pause();
+    $("#btnPlayMusic").show();
+    $("#btnPauseMusic").hide();
   }
 
 
@@ -1569,13 +1751,39 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
     $('html, body').animate({scrollTop : offset.top}, 400);
   }
 
+  let moveContact = function(){
+    let offset = $("#moveContact").offset();
+    console.log(offset);
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
   let movePhotoAlbum = function(){
     let offset = $("#movePhotoAlbum").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+  
+  let moveLoveStory = function(){
+    let offset = $("#moveLoveStory").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let movePoem = function(){
+    let offset = $("#movePoem").offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
   }
 
   let moveMap = function(){
     let offset = $("#moveMap").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveCalendar= function(){
+    let offset = $("#moveCalendar").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveCelebration = function(){
+    let offset = $("#moveCelebration").offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
   }
 
