@@ -660,7 +660,7 @@ body {
           </div>
 
           <!-- 20221018 개수 조정 임시 주석 -->
-          <!-- <div class="product">
+          <div class="product">
             <a href="javascript:void(0);" class="d-block">
               <img src="images/final/photo11.webp" alt="Image" class="img-fluid">
             </a>
@@ -793,7 +793,7 @@ body {
             </a>
             <div class="text-center text-md-left">
             </div>
-          </div> -->
+          </div>
           <!-- 20221018 개수 조정 임시 주석 -->
         </div>
       </div>
@@ -1611,7 +1611,15 @@ body {
       //   console.log('this is not chrome browser');
       //   $("#btnPlayMusic").trigger("click");
       // }
+
+      window.addEventListener('load', function () {
+        $(function($) {
+            $("img").Lazy();
+        });
+      });
   });
+
+
 
   var audio = new Audio("./mp3/Taylor Swift_Love Story.mp3");;
 
