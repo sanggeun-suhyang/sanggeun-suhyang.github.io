@@ -192,7 +192,7 @@ $(function(){
 				loop: true,
 				autoHeight: true,
 				margin: 10,
-				//autoplay: true,
+				autoplay: true,
 				smartSpeed: 1200,
 				items: 1,
 				nav: false,
