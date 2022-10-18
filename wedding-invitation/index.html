@@ -1685,7 +1685,6 @@ body {
       return "webkitvisibilitychange";
     }
   }
-
   
   let handleVisibilityChange = function(){
 
@@ -1694,9 +1693,13 @@ body {
 
     if (document[getHiddenValue()]) {
       audio.pause();
+      $("#btnPlayMusic").show();
+      $("#btnPauseMusic").hide();
     } else {
       // foreground
       audio.play();
+      $("#btnPlayMusic").hide();
+      $("#btnPauseMusic").show();
     }
   }
 
@@ -1921,8 +1924,9 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
     var c = document.getElementsByTagName('canvas')[0];
     var b = document.body;
     var a = c.getContext('2d');
+    // c.width = c.parentElement.width-800;
+    // c.height = c.parentElement.height;
     
-
     var n=Math.pow, 
         i,
         E=2,
@@ -1932,7 +1936,7 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
         L=1,
         u=12,
         W=window,
-        w=c.width=window.innerWidth,
+        w=c.width=window.innerWidth -20,
         h=c.height=window.innerHeight,
         r=function(){
           return Math.random()*2-1
