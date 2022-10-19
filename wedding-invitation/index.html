@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
-  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad&libraries=services"></script> -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad&libraries=services"></script>
 
   <title>상근♥수향 모바일 청첩장</title>
 
@@ -385,7 +385,7 @@ body {
           <li><i class="fa-solid fa-envelope" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveInvitation();">초대의글</a></li>
           <li><i class="fa-solid fa-phone" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveContact();">연락하실곳</a></li>
           <li><i class="fa-solid fa-camera" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="movePhotoAlbum();">사진첩</a></li>
-          <li><i class="fa-solid fa-heart" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveLoveStory();">러브스토리</a></li>
+          <li><i class="fa-solid fa-heart" style="padding:9px; float:left;color: red;"></i><a style="cursor: pointer;" onclick="moveLoveStory();">러브스토리</a></li>
           <li><i class="fa-solid fa-book" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="movePoem();">시-정현종 &lt방문객&gt</a></li>
           <li><i class="fa-solid fa-map-location-dot" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveMap();">오시는길</a></li>
           <li><i class="fa-solid fa-calendar-days" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCalendar();">결혼식날</a></li>
@@ -671,7 +671,22 @@ body {
               
             </div>
           </div>
-
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo10-1.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo10-2.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
           <!-- 20221018 개수 조정 임시 주석 -->
           <div class="product">
             <a href="javascript:void(0);" class="d-block">
@@ -689,14 +704,14 @@ body {
               
             </div>
           </div>
-          <div class="product">
+          <!-- <div class="product">
             <a href="javascript:void(0);" class="d-block">
               <img src="images/final/photo13.jpg" alt="Image" class="img-fluid">
             </a>
             <div class="text-center text-md-left">
               
             </div>
-          </div>
+          </div> -->
           <div class="product">
             <a href="javascript:void(0);" class="d-block">
               <img src="images/final/photo14.jpg" alt="Image" class="img-fluid">
@@ -1175,7 +1190,7 @@ body {
                     <div class="weeks">
                       <div class="first">
                         <span class="last-month">30</span>
-                        <span class="last-month">21</span>
+                        <span class="last-month">31</span>
                         <span>1</span>
                         <span>2</span>
                         <span class="event">3</span>
@@ -1588,10 +1603,10 @@ body {
   const url = 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html';    // <a>태그에서 호출한 함수인 clip 생성
 
   $( document ).ready(function() {
-      //initKAKAO();
+      initKAKAO();
       initDrawHeart();
       initWeddingDay();
-      //initMapWeddingHall2();
+      initMapWeddingHall2();
       initMusic();
       
       //크롬이 아닐 경우
@@ -1892,7 +1907,7 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
         content: {
           title: '상근♥수향 모바일 청첩장',
           description: '최상근 정수향 결혼식에 초대합니다.',
-          imageUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/images/final/Invitation.webp',
+          imageUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/images/final/invitation.jpg',
           link: {
             mobileWebUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html',
             webUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html',
