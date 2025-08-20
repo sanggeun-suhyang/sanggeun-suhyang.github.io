@@ -1565,34 +1565,34 @@ body {
   const url = 'https://sanggeun-suhyang.github.io/housewarming-party/index.html';    // <a>태그에서 호출한 함수인 clip 생성
 
   $( document ).ready(function() {
-      //initKAKAO();
+      initKAKAO();
       initDrawHeart();
       initWeddingDay();
-      //initMapWeddingHall2();
+      initMap2();
       initMusic();
       
       //크롬이 아닐 경우
       var agent = window.navigator.userAgent.toLowerCase(); 
 
       //20250820 임시주석
-      // switch (true){
-      //   case agent.indexOf("edge") > -1:
-      //   $("#btnPlayMusic").trigger("click");
-      //   $("#btnPlayMusic").hide();
-      //   $("#btnPauseMusic").show();
-      //   braek;
-      //   case agent.indexOf("edg/") > -1:
-      //   //$("#btnPlayMusic").trigger("click");
-      //   break;
-      //   case agent.indexOf("chrome") > -1 && !!window.chrome:
-      //   //$("#btnPlayMusic").trigger("click");
-      //   break;
-      //   default:
-      //   $("#btnPlayMusic").trigger("click");
-      //   $("#btnPlayMusic").hide();
-      //   $("#btnPauseMusic").show();
-      //   break;
-      // }
+      switch (true){
+        case agent.indexOf("edge") > -1:
+        $("#btnPlayMusic").trigger("click");
+        $("#btnPlayMusic").hide();
+        $("#btnPauseMusic").show();
+        braek;
+        case agent.indexOf("edg/") > -1:
+        //$("#btnPlayMusic").trigger("click");
+        break;
+        case agent.indexOf("chrome") > -1 && !!window.chrome:
+        //$("#btnPlayMusic").trigger("click");
+        break;
+        default:
+        $("#btnPlayMusic").trigger("click");
+        $("#btnPlayMusic").hide();
+        $("#btnPauseMusic").show();
+        break;
+      }
 
 
       // console.log(agent);
@@ -1613,7 +1613,7 @@ body {
 
 
 
-  var audio = new Audio("./mp3/Taylor Swift_Love Story.mp3");;
+  var audio = new Audio("./mp3/blue_yung kai_blue.mp3");;
 
   let initMusic = function(){
     $("#btnPlayMusic").show();
@@ -1718,10 +1718,10 @@ body {
     marker.setMap(map);
 }
 
-function initMapWeddingHall2(){
+function initMap2(){
   var mapContainer = document.getElementById('map2'), // 지도를 표시할 div 
     mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(37.48257, 126.86845), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };  
 
@@ -1747,7 +1747,7 @@ geocoder.addressSearch('서울 구로구 경인로 624', function(result, status
 
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;">상근<label style="color:red;">♥</label>수향<br/>결혼식장</div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">상근<label style="color:red;">♥</label>수향<br/>Sweet Home</div>'
         });
         infowindow.open(map, marker);
 
