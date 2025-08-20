@@ -1,0 +1,2033 @@
+<!-- /*
+* Template Name: Style
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="images/home.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="free template, bootstrap, bootstrap4" />
+  <meta property="og:title" content="상근♥수향 집들이 초대장" />
+  <meta property="og:url" content="https://sanggeun-suhyang.github.io/wedding-invitation" />
+  <meta property="og:image" content="https://sanggeun-suhyang.github.io/wedding-invitation/images/final/invitation.webp" />
+  <meta property="og:description" content="최상근 정수향 집들이에 초대합니다." />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&family=Noto+Sans+KR&family=Black+Han+Sans&family=Hi+Melody&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/feather/style.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://kit.fontawesome.com/d70ab5995d.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3f032518f57e515c1fdcb4b23b75cad&libraries=services"></script>
+
+  <title>상근♥수향 집들이 초대장</title>
+
+<style>
+
+
+html, body {
+  overscroll-behavior: contain;
+}
+
+.custom-text {
+  margin: auto;
+  text-align: center;
+}
+
+.btn.btn-primary.account {
+  font-size: 15px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  width: 46.5px;
+}
+
+.accountInfo{
+  display: flex; float:left;
+}
+
+.accountBtn{
+  padding:10px 10px 10px 10px;
+  margin:auto;
+}
+
+.telItem{
+  text-align: center;
+  float: left;
+  width:33%;
+  padding:20px
+}
+
+.mapDiv{
+  font-size: 18px;
+}
+
+
+/* calendar */
+/* * {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+	background: #dfebed;
+	font-family: 'Roboto', sans-serif;
+} */
+
+.container-calendar {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+  font-size: 17px;
+}
+
+.calendar {
+	/* background: #000000b5; */
+  /* background: #000; */
+  background:#FFF;
+	border-radius: 4px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+	height: 490px;
+  perspective: 1000;
+	transition: .9s;
+	transform-style: preserve-3d;
+	width: 100%;
+}
+
+/* Front - Calendar */
+.front {
+	transform: rotateY(0deg);
+}
+
+.current-month{
+  margin-top: 20px;
+}
+
+.current-date {
+	border-bottom: 1px solid #E93D6D;
+	/* display: flex; */
+	justify-content: space-around;
+	padding: 5px 30px;
+  text-align: center;
+}
+
+.current-date h1 {
+	/* color: #dfebed; */
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.week-days {
+	/* color: #dfebed; */
+	display: flex;
+	justify-content: space-between;
+	font-weight: 600;
+	padding: 5px 45px;
+}
+
+.days {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.weeks {
+	/* color: #fff; */
+	display: flex;
+	flex-direction: column;
+	padding: 5px 30px;
+}
+
+.weeks div {
+	display: flex;
+	font-size: 1.2em;
+	font-weight: 300;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.last-month {
+	opacity: .3;
+}
+
+.weeks span {
+	padding: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.weeks span.active {
+	background: #E93D6D;
+	border-radius: 50%;
+}
+
+.weeks span:not(.last-month):hover {
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.event {
+	position: relative;
+}
+
+.event:after {
+	content: '•';
+	color: #E93D6D;
+	font-size: 1.4em;
+	position: absolute;
+	right: -4px;
+	top: -4px;
+}
+
+/* Back - Event form */
+
+.back {
+	height: 100%;
+	transform: rotateY(180deg);
+}
+
+.back input {
+	background: none;
+	border: none;
+	border-bottom: 1px solid rgba(73, 114, 133, .6);
+	color: #dfebed;
+	font-size: 1.4em;
+	font-weight: 300;
+	padding: 30px 40px;
+	width: 100%;
+}
+
+.info {
+	color: #dfebed;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	font-size: 1.2em;
+	padding: 30px 40px;
+}
+
+.info div:not(.observations) {
+	margin-bottom: 40px;
+}
+
+.info span {
+	font-weight: 300;
+}
+
+.info .date {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info .date p {
+	width: 50%;
+}
+
+.info .address p {
+	width: 100%;
+}
+
+.actions {
+	bottom: 0;
+	border-top: 1px solid rgba(73, 114, 133, .6);
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 100%;
+}
+
+.actions button {
+	background: none;
+	border: 0;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 30px 0;
+	text-transform: uppercase;
+	width: 50%;
+}
+
+.actions button:first-of-type {
+	border-right: 1px solid rgba(73, 114, 133, .6);
+}
+
+.actions button:hover {
+	background: #497285;
+	cursor: pointer;
+}
+
+.actions button:active {
+	background: #5889a0;
+	outline: none;
+}
+
+/* Flip animation */
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+	backface-visibility: hidden;
+}
+
+
+.accountDiv{
+  width:100%;
+}
+
+.accountLeft{
+  width:65%;
+  float:left;
+}
+
+.accountRight{
+  width:35%;
+  float:Right;
+  text-align: center; 
+  padding: 10px 10px 10px 10px;
+}
+
+
+</style>
+
+</head>
+<body>
+  <div style="position: absolute;">
+    <canvas></canvas>
+  </div>
+
+  <div class="lines-wrap">
+    <div class="lines-inner">
+      <div class="lines"></div>
+    </div>
+  </div>
+  <!-- END lines -->
+
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="site-navigation">
+        <div id="moveHome"></div>
+        <!-- <a href="index.html" class="logo float-left m-0">Style <span class="text-primary">.</span></a> -->
+
+        <ul class="js-clone-nav d-none d-lg-inline-noone text-left site-menu">
+          <!-- <li class="active"><a href="index.html">Home</a></li>
+          <li class="has-children">
+            <a href="#">Pages</a>
+            <ul class="dropdown">
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="single.html">Single</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+              <li class="has-children">
+                <a href="#">Menu Two</a>
+                <ul class="dropdown">
+                  <li><a href="#">Sub Menu One</a></li>
+                  <li><a href="#">Sub Menu Two</a></li>
+                  <li><a href="#">Sub Menu Three</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Menu Three</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="elements.html">Elements</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li> -->
+          <li><i class="fa-solid fa-envelope" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveInvitation();">초대의글</a></li>
+          <li><i class="fa-solid fa-phone" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveContact();">연락하실곳</a></li>
+          <li><i class="fa-solid fa-camera" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="movePhotoAlbum();">사진첩</a></li>
+          <li><i class="fa-solid fa-heart" style="padding:9px; float:left;color: red;"></i><a style="cursor: pointer;" onclick="moveLoveStory();">러브스토리</a></li>
+          <li><i class="fa-solid fa-book" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="movePoem();">시-정현종 &lt방문객&gt</a></li>
+          <li><i class="fa-solid fa-map-location-dot" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveMap();">오시는길</a></li>
+          <li><i class="fa-solid fa-calendar-days" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCalendar();">결혼식날</a></li>
+          <li><i class="fa-solid fa-heart" style="padding:9px; float:left;"></i><a style="cursor: pointer;" onclick="moveCelebration();">마음전하실곳</a></li>
+        </ul>
+        <div style="float:left">
+          <a id="btnPlayMusic" onclick="playMusic();" style="position:fixed; z-index:999;font-size: 25px;display:none;"><i class="fa-solid fa-circle-play"></i></a>
+          <a id="btnPauseMusic" onclick="pauseMusic();" style="position:fixed; z-index:999;font-size: 25px;display: none;;"><i class="fa-solid fa-circle-pause"></i></a>
+        </div>
+        <div style="float:right; width:28px;">
+          <a href="javascript:void(0);" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-block" data-toggle="collapse" data-target="#main-navbar" style="position:fixed; z-index:999;">
+            <span></span>
+          </a>
+        </div>
+        
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="custom-hero">
+    <div class="container">
+      <!-- <div class="row justify-content-center" style="background-image: url(images/wedding_main.jpg); background-size: 100%;"> -->
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <!-- <h1 class="hero-heading">최상근</h1>
+          <h1 class="hero-heading">&</h1>
+          <h1 class="hero-heading">정수향</h1>
+          <h1 class="hero-heading">우리</h1>
+          <h1 class="hero-heading">결혼합니다</h1> -->
+          
+          
+          <h1 class="hero-heading">Housewarming Party</h1>
+          <h1 class="hero-heading">Invitation</h1>
+          <!-- <h1 class="hero-heading">리</h1>
+          <h1 class="hero-heading">결</h1>
+          <h1 class="hero-heading">혼</h1>
+          <h1 class="hero-heading">해</h1>
+          <h1 class="hero-heading">요</h1> -->
+
+          <div  class="line js-line mx-auto mb-3 my-3"></div>
+          <!-- <p><label class="sub-text">최상근</label> <label class="sub-text" style="font-size: 12px !important;">그리고</label> <label label class="sub-text">정수향</label></p> -->
+          <p class="sub-text">2025년 9월 5일 금요일 오후 5시 30분</p>
+          <p class="sub-text">상근♥수향 Sweet Home</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row align-items-center justify-content-around">
+
+        <div class="col-lg-4 text-center" id="moveInvitation">
+
+          <div  >
+            <div data-jarallax-element="-100" class="jarallax">
+              <i class="fa-solid fa-envelope"></i>
+              <h2>초대의글</h2>
+              <!-- <span class="d-inline-block">Invitation</span> -->
+              <img src="images/final/invitation.webp" alt="Image" class="img-fluid my-3 my-lg-5">
+              <p class="line-top fig-2-text mb-4">세상에서 가장 빼어나고 (秀) 향기로운 (香)</p>
+              <p class="line-top fig-2-text mb-4">두 사람이 만나</p>
+              <p class="line-top fig-2-text mb-4">서로의 (相) 뿌리가 (根) 되어</p>
+              <p class="line-top fig-2-text mb-4">인생을 함께하려 합니다.</p>
+              <br/>
+              <p class="line-top fig-2-text mb-4">저희 두 사람의 첫걸음에</p>
+              <p class="line-top fig-2-text mb-4">함께 자리하여 축복과 격려 주시면</p>
+              <p class="line-top fig-2-text mb-4">더 없는 기쁨으로 간직하겠습니다.</p> 
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-5 mt-5" id="moveContact">
+
+          <div>
+            <i class="fa-sharp fa-solid fa-phone"></i>
+            <h2>연락하실곳</h2>
+            <!-- <span class="d-inline-block">Wedding Days</span> -->
+
+            <div  class="line me-auto mb-3 mt-3"></div>
+
+            <!-- <p class="line-top fig-2-text my-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
+            <div style="text-align: center; padding: 5px;">
+              <b>신랑측</b>
+            </div>
+            <div style="padding:5px;">
+              <div class="telItem">
+                <label>아버지</label> <br/>
+                <b>최창이</b> <br/>
+                <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-3781-7340'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-3781-7340'"></i>
+              </div>
+              <div class="telItem">
+                <label>어머니</label> <br/>
+                <b>김은숙</b> <br/>
+                <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-7166-7340'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-7166-7340'"></i>
+              </div>
+              <div class="telItem">
+                <label style="color: skyblue;">아들</label> <br/>
+                <b>최상근</b> <br/>
+                <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-6322-7340'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-6322-7340'"></i>
+              </div>
+            </div>
+            
+
+            <div style="text-align: center; padding: 5px;">
+              <b>신부측</b>
+            </div>
+            <div class="telItem">
+              <label>아버지</label> <br/>
+              <b>정지현</b> <br/>
+              <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-9011-6038'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-9011-6038'"></i>
+            </div>
+            <div class="telItem">
+              <label>어머니</label> <br/>
+              <b>김경숙</b> <br/>
+              <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-9015-0716'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-9015-0716'"></i>
+            </div>
+            <div class="telItem">
+              <label style="color: lightpink;">딸</label> <br/>
+              <b>정수향</b> <br/>
+              <i class="fa-sharp fa-solid fa-phone" onclick="document.location.href='tel:010-3690-6038'"></i>&nbsp;&nbsp;<i class="fa-solid fa-envelope" onclick="document.location.href='sms:010-3690-6038'"></i>
+            </div>
+            <!-- <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-2 d-flex align-items-md-center">
+            <div class="image">
+              <img src="images/final/none1.webp" alt="Image" class="img-fluid">
+            </div>
+            <div class="text custom-text">
+              <!-- <p>결혼이란</p>
+              <p>남자의 자유를 걸고,</p>
+              <p>여자의 행복을 거는 것</p>
+              <h2> - 마담 드 류우 -</h2> -->
+              <p>언제나 곁에서</p>
+              <p>사랑으로</p>
+              <p>함께하겠습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-2 d-flex align-items-md-center">
+            <div class="image">
+              <img src="images/final/none2.jpg" alt="Image" class="img-fluid">
+            </div>
+            <div class="text custom-text">
+              <!-- <p>결혼전에는 눈을 크게 뜨고</p> 
+              <p>결혼 후에는 반쯤 감아라</p>
+              <h2>- 토머스 플러 -</h2> -->
+              <p>사랑하는 마음과</p>
+              <p>고마움의 표현을</p>
+              <p>아끼지 않겠습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-2 d-flex align-items-md-center">
+            <div class="image">
+              <img src="images/final/none3.jpg" alt="Image" class="img-fluid">
+            </div>
+            <div class="text custom-text">
+              <!-- <p>행복한 결혼 생활에서 </p>
+              <p>중요한 것은</p>
+              <p>서로 얼마나</p>
+              <p>잘 맞는가 보다</p>
+              <p>다른 점을 어떻게</p>
+              <p>극복해 나가느냐이다.</p>
+              <h2>- 톨스토이 -</h2> -->
+              <p>서로에게</p>
+              <p>행복을 주는</p>
+              <p>안식처가 되겠습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-4" id="movePhotoAlbum">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-6">
+          <i class="fa-solid fa-camera"></i>
+          <h2 class="line-top">사진첩</h2>
+          <!-- <span class="d-inline-block">Photo Album</span> -->
+          <div class="line my-3"></div>
+        </div>
+        <div class="col-6 text-right">
+          <a href="javascript:void(0);" class="custom-prev-v2 js-custom-prev-v2">이전</a>
+          <span class="mx-3">/</span>
+          <a href="javascript:void(0);" class="custom-next-v2 js-custom-next-v2">다음</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="owl-4-slider owl-carousel">
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo1.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo2.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo3.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo4.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo5.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo6.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo7.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo8.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo9.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo10.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo10-1.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo10-2.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <!-- 20221018 개수 조정 임시 주석 -->
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo11.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo12.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <!-- <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo13.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div> -->
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo14.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo15.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo16.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo17.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo18.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo19.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo20.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo21.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo22.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo23.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo24.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo25.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+              
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo26.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo27.jpg" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+            </div>
+          </div>
+          <div class="product">
+            <a href="javascript:void(0);" class="d-block">
+              <img src="images/final/photo28.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="text-center text-md-left">
+            </div>
+          </div>
+          <!-- 20221018 개수 조정 임시 주석 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="moveLoveStory">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <i class="fa-solid fa-heart"></i>
+          <h2 class="mb-4">러브스토리</h2>
+          <div class="line my-3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="blog_entry">
+            <a href="javascript:void(0);"><img src="images/final/lovestory1.jpg" alt="" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <h3><a href="javascript:void(0);">우리의 첫만남</a></h3>
+              <span class="date">2011년 3월</span>
+              <p>우리 두사람은 대학시절</p>
+              <!-- <p>우스갯 소리로 말하는</p> -->
+              <p>복학생 오빠 새내기 여학생 사이로</p>
+              <p>처음 만났습니다.</p>
+              <p>서로에게 호감이 있었지만 연인으로까진 발전하진 못했죠.</p>
+              <!-- <p class="more"><a href="#">Read more...</a></p> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="blog_entry">
+            <a href="javascript:void(0);"><img src="images/final/lovestory2.jpg" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <h3><a href="javascript:void(0);">우리의 인연</a></h3>
+              <span class="date">2019년 11월</span>
+              <p>그렇게 8년이란 시간이 흐른뒤</p>
+              <p>다시 만날 기회가 생겼고</p>
+              <p>우리는 연인이되었습니다.</p>
+              <p>우리는 인연이었나 봅니다.</p>
+              <!-- <p class="more"><a href="#">Read more...</a></p> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="blog_entry">
+            <a href="javascript:void(0);"><img src="images/final/lovestory3.jpg" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <h3><a href="javascript:void(0);">우리의 새로운 시작</a></h3>
+              <span class="date">2022년 11월</span>
+              <p>3년동안 함께한 모든 시간이 행복했습니다.</p>
+              <p>평생을 함께해도 좋겠다는 생각이 들었습니다.</p>
+              <p>그래서 결혼을 결심했습니다.</p>
+              <p>우리의 새로운 시작이 기대됩니다.</p>
+              <p></p>
+              <!-- <p class="more"><a href="#">Read more...</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="movePoem">
+    <div class="container">
+      <div class="row justify-content-around align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="image-stack-v2">
+            <div class="image-stack__item image-stack__item--top">
+              <div data-jarallax-element="-100" class="jarallax">
+                <img src="images/final/poem2.jpg" alt="Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="image-stack__item image-stack__item--bottom">
+              <img src="images/final/poem1.webp" alt="Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <i class="fa-solid fa-book"></i>
+          <h2 class="mb-4">시 - 정현종 &lt;방문객&gt;</h2>
+          <div class="line my-3"></div>
+          <p>사람이 온다는 건</p>
+          <p>실은 어마어마한 일이다.</p>
+          <p>그는</p>
+          <p>그의 과거와</p>
+          <p>현재와</p>
+          <p>그리고</p>
+          <p>그의 미래와 함께 오기 때문이다.</p>  
+          <p>한 사람의 일생이 오기 때문이다.</p>  
+          <p>부서지기 쉬운</p>  
+          <p>그래서 부서지기도 했을</p>    
+          <p>마음이 오는 것이다 - 그 갈피를</p>    
+          <p>아마 바람은 더듬어볼 수 있을</p>     
+          <p>마음,</p>   
+          <p>내 마음이 그런 바람을 흉내낸다면</p>   
+          <p>필경 환대가 될 것이다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section" id="moveMap">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-4">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h2>오시는길</h2>
+          <div class="line my-3"></div>
+        </div>
+        <div class="col-lg-4">
+        </div>
+      </div>
+      <div class="row justify-content-center" style="padding:20px;">
+        <!-- <div id="map" style="width:100%;height:400px;"></div> -->
+
+        <div id="map2" style="width:100%;height:400px;"></div>
+      </div>
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8">
+          <b>주소</b> <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAddress()">복사</a>
+          <div class="mapDiv">
+            <p>철산자이더헤리티지</p>
+            <p>경기도 광명시 시청로 70</p>
+          </div>
+          
+        </div>
+        <div class="col-lg-8">
+          <b>지하철</b>
+          <div class="mapDiv">
+            <p><i class="fa-solid fa-subway" style="color: darkblue;"></i>&nbsp;1호선 <i class="fa-solid fa-subway" style="color: green;"></i>2호선 신도림역 1번 출구 </p>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <b>버스</b>
+          <div class="mapDiv">
+            <p>정류장 : 연서도서관.철산종합사회복지관</p>
+            <p>경기일반<i class="fa-solid fa-bus" style="color: #00b07b;"></i> 11-1, 11-2</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- <div class="section" id="movePoem">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-4">
+          <i class="fa-solid fa-book"></i>
+          <h2>정현종 &lt;방문객&gt;</h2>
+          <div class="line my-3"></div>
+        </div>
+        <div class="col-lg-4">
+        </div>
+      </div>
+      <div class="row justify-content-center" style="padding:20px;">
+        <div style="padding:2px; text-align: center; margin: auto;">
+          <p class="line-top fig-2-text my-4">
+            사람이 온다는 건
+          </p>
+          <p class="line-top fig-2-text my-4">
+            실은 어마어마한 일이다.
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그는
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그의 과거와
+          </p>
+          <p class="line-top fig-2-text my-4">
+            현재와
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그리고
+          </p>
+          <p class="line-top fig-2-text my-4">
+            그의 미래와 함께 오기 때문이다.
+          </p>  
+          <p class="line-top fig-2-text my-4">
+            한 사람의 일생이 오기 때문이다.
+          </p>  
+          <p class="line-top fig-2-text my-4">
+            부서지기 쉬운
+          </p>  
+          <p class="line-top fig-2-text my-4">
+            그래서 부서지기도 했을
+          </p>    
+          <p class="line-top fig-2-text my-4">
+            마음이 오는 것이다 - 그 갈피를
+          </p>    
+          <p class="line-top fig-2-text my-4">
+            아마 바람은 더듬어볼 수 있을
+          </p>     
+          <p class="line-top fig-2-text my-4">
+            마음,
+          </p>   
+          <p class="line-top fig-2-text my-4">
+            내 마음이 그런 바람을 흉내낸다면
+          </p>   
+          <p class="line-top fig-2-text my-4">
+            필경 환대가 될 것이다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- <div class="section" id="movePoem">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-4">
+
+          <div>
+            <i class="fa-solid fa-book"></i>
+            <h2>정현종 &lt;방문객&gt;</h2>
+            <div  class="line me-auto mb-3 mt-3"></div>
+            <div style="padding:2px; text-align: center; margin: auto;">
+              <p class="line-top fig-2-text my-4">
+                사람이 온다는 건
+              </p>
+              <p class="line-top fig-2-text my-4">
+                실은 어마어마한 일이다.
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그는
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그의 과거와
+              </p>
+              <p class="line-top fig-2-text my-4">
+                현재와
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그리고
+              </p>
+              <p class="line-top fig-2-text my-4">
+                그의 미래와 함께 오기 때문이다.
+              </p>  
+              <p class="line-top fig-2-text my-4">
+                한 사람의 일생이 오기 때문이다.
+              </p>  
+              <p class="line-top fig-2-text my-4">
+                부서지기 쉬운
+              </p>  
+              <p class="line-top fig-2-text my-4">
+                그래서 부서지기도 했을
+              </p>    
+              <p class="line-top fig-2-text my-4">
+                마음이 오는 것이다 - 그 갈피를
+              </p>    
+              <p class="line-top fig-2-text my-4">
+                아마 바람은 더듬어볼 수 있을
+              </p>     
+              <p class="line-top fig-2-text my-4">
+                마음,
+              </p>   
+              <p class="line-top fig-2-text my-4">
+                내 마음이 그런 바람을 흉내낸다면
+              </p>   
+              <p class="line-top fig-2-text my-4">
+                필경 환대가 될 것이다.
+              </p>
+            </div>
+            <img src="images/img_v_1-min.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+
+  <!-- <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-v3 d-block">
+            <div class="wrap-icon">
+              <i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>
+            </div>
+            <div class="text">
+              <h3>Minimal Design</h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text</p>
+              <p class="more"><a href="#">Read more...</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-v3 d-block">
+            <div class="wrap-icon">
+              <i class="flaticon-weekly-calendar-outline-event-interface-symbol"></i>
+            </div>
+            <div class="text">
+              <h3>Less is more</h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text</p>
+              <p class="more"><a href="#">Read more...</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-v3 d-block">
+            <div class="wrap-icon">
+              <i class="flaticon-copy-two-paper-sheets-interface-symbol"></i>
+            </div>
+            <div class="text">
+              <h3>Whitespaces</h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text</p>
+              <p class="more"><a href="#">Read more...</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="section" id="moveCalendar">
+    <div class="container">
+      <div class="row justify-content-around align-items-center">
+        <div class="col-lg-6" style="padding-bottom:30px">
+          <div>
+            <!-- calendar -->
+            <div class="container-calendar">
+              <div class="calendar">
+                <div class="front">
+                  <div class="current-date">
+                    <h1>2025년 9월 6일</h1>
+                    <h1>금요일 오후 5시 30분</h1>
+                    <!-- <h1>27일 일요일</h1>	 -->
+                  </div>
+
+                  <div class="current-month">
+                    <ul class="week-days">
+                      <li>일</li>
+                      <li>월</li>
+                      <li>화</li>
+                      <li>수</li>
+                      <li>목</li>
+                      <li>금</li>
+                      <li>토</li>
+                    </ul>
+
+                    <div class="weeks">
+                      <div class="first">
+                        <span class="last-month">31</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span class="active">6</span>
+                      </div>
+
+                      <div class="second">
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                      </div>
+
+                      <div class="third">
+                        <span>14</span>
+                        <span>15</span>
+                        <span>16</span>
+                        <span>17</span>
+                        <span>18</span>
+                        <span>19</span>
+                        <span>20</span>
+                      </div>
+
+                      <div class="fourth">
+                        <span>21</span>
+                        <span>22</span>
+                        <span>23</span>
+                        <span>24</span>
+                        <span>25</span>
+                        <span>26</span>
+                        <span>27</span>
+                      </div>
+
+                      <div class="fifth">
+                        <span>28</span>
+                        <span>29</span>
+                        <span>30</span>
+                        <span class="last-month">1</span>
+                        <span class="last-month">2</span>
+                        <span class="last-month">3</span>
+                        <span class="last-month">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="back">
+                  <input placeholder="What's the event?">
+                  <div class="info">
+                    <div class="date">
+                      <p class="info-date">
+                      Date: <span>Jan 15th, 2016</span>
+                      </p>
+                      <p class="info-time">
+                        Time: <span>6:35 PM</span>
+                      </p>
+                    </div>
+                    <div class="address">
+                      <p>
+                        Address: <span>129 W 81st St, New York, NY</span>
+                      </p>
+                    </div>
+                    <div class="observations">
+                      <p>
+                        Observations: <span>Be there 15 minutes earlier</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="actions">
+                    <button class="save">
+                      Save <i class="ion-checkmark"></i>
+                    </button>
+                    <button class="dismiss">
+                      Dismiss <i class="ion-android-close"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <div class="image-stack-v2">
+            <div class="image-stack__item image-stack__item--top">
+              <div data-jarallax-element="-100" class="jarallax">
+                <img src="images/img_v_3-min.jpg" alt="Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="image-stack__item image-stack__item--bottom">
+              <img src="images/img_v_8-min.jpg" alt="Image" class="img-fluid">
+            </div>
+          </div> -->
+
+
+        </div>
+        <br/>
+        <div class="col-lg-4">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h2 class="mb-4">집들이날</h2>
+          <div class="line my-3"></div>
+          최상근<label style="color:#E93D6D;">♥</label>정수향 집들이 <b id="weddingDday"></b> <label id="weddingDday2">일전</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container pb-5 mb-5 border-bottom" id="moveCelebration">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <i class="fa-solid fa-heart"></i>
+        <h2 class="mb-4">마음전하실곳</h2>
+        <div class="line my-3"></div>
+        <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        <p class="mt-5"><a href="#" class="btn btn-primary">Get In Touch</a></p> -->
+
+        
+      </div>
+      <div class="col-lg-7">
+        <div class="custom-accordion" id="accordion_1">
+          <div class="accordion-item">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">신랑측</button>
+            </h2>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_1">
+              <div class="accordion-body">
+                <!-- <div class="accountInfo">
+                  <div class="">
+                    <b>최창이</b>
+                    <br />
+                    <label>하나은행&nbsp;</label><label id="menF">064-18-43135-9</label>
+                  </div>  
+                  <div class="accountBtn">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('menF')">복사</a>
+                  </div>
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>김은숙</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="menM">620-229085-629</label>
+                  </div>  
+                  <div class="accountBtn">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('menM')">복사</a>
+                  </div>
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>최상근</b>
+                    <br/>
+                    <label>신한은행&nbsp;</label><label id="men">110-237-002117&nbsp;</label>
+                  </div>  
+                  <div class="accountBtn">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('men')">복사</a>
+                  </div>
+                </div> -->
+                <div class="accountDiv">
+                  <div class="accountLeft">
+                    <b>최창이</b>
+                    <br />
+                    <label>하나은행&nbsp;</label><label id="menF">064-18-43135-9</label>
+                  </div>
+                  <div class="accountRight">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('menF')">복사</a>
+                  </div>
+                </div>
+                <div class="accountDiv">
+                  <div class="accountLeft">
+                    <b>김은숙</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="menM">620-229085-629</label>
+                  </div>
+                  <div class="accountRight">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('menM')">복사</a>
+                  </div>
+                </div>
+                <div class="accountDiv">
+                  <div class="accountLeft">
+                    <b>최상근</b>
+                    <br/>
+                    <label>신한은행&nbsp;</label><label id="men">110-237-002117&nbsp;</label>
+                  </div>
+                  <div class="accountRight">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('men')">복사</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .accordion-item -->
+
+          <div class="accordion-item">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">신부측</button>
+            </h2>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_1">
+              <div class="accordion-body">
+                <!-- <div class="accountInfo">
+                  <div class="">
+                    <b>정지현</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="womanF">490-910352-88207</label>
+                  </div>  
+                  <div class="accountBtn">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanF')">복사</a>
+                  </div>
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>김경숙</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="womanM">490-910352-91507&nbsp;</label>
+                  </div>  
+                  <div class="accountBtn">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanM')">복사</a>
+                  </div>
+                </div>
+                <div class="accountInfo">
+                  <div class="">
+                    <b>정수향</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="woman">437-910168-54407</label>
+                  </div>  
+                  <div class="accountBtn">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('woman')">복사</a>
+                  </div>
+                </div> -->
+                <div class="accountDiv">
+                  <div class="accountLeft">
+                    <b>정지현</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="womanF">490-910352-88207</label>
+                  </div>
+                  <div class="accountRight">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanF')">복사</a>
+                  </div>
+                </div>
+                <div class="accountDiv">
+                  <div class="accountLeft">
+                    <b>김경숙</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="womanM">490-910352-91507&nbsp;</label>
+                  </div>
+                  <div class="accountRight">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanM')">복사</a>
+                  </div>
+                </div>
+                <div class="accountDiv">
+                  <div class="accountLeft">
+                    <b>정수향</b>
+                    <br/>
+                    <label>하나은행&nbsp;</label><label id="woman">437-910168-54407</label>
+                  </div>
+                  <div class="accountRight">
+                    <a href="javascript:void(0);" class="btn btn-primary account" onclick="copyAccount('womanF')">복사</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .accordion-item -->
+          <!-- <div class="accordion-item">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How to link your paypal and bank account?</button>
+            </h2>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion_1">
+              <div class="accordion-body">
+                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+              </div>
+            </div>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-hero section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <p style="cursor: pointer;" onclick="shareKAKAO();"><i class="fa-solid fa-comment"></i>카카오톡 공유</p>
+          <p style="cursor: pointer;" onclick="copyURL();"><i class="fa-solid fa-link"></i>청첩장 주소 복사</p>
+          <br />
+          <br />
+          <p><a href="#" class="btn btn-primary">처음으로</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <div class="container">
+      <!-- <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="widget">
+            <h3>About</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.</p>
+          </div>
+          <div class="widget">
+            <h3>Connect with us</h3>
+            <ul class="social list-unstyled">
+              <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+              <li><a href="#"><span class="icon-dribbble"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="widget">
+                <h3>Navigations</h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Work</a></li>
+                  <li><a href="#">Process</a></li>
+                  <li><a href="#">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Process</a></li>
+                  <li><a href="#">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="row justify-content-center text-center copyright">
+        <div class="col-md-8">
+          <p>Designed with love by Untree.co</p>
+          <p>Developed by 최상근</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/imagesloaded.pkgd.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jarallax.min.js"></script>
+  <script src="js/jarallax-element.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/moment.js"></script>
+
+
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/ScrollMagic.min.js"></script>
+  <script src="js/scrollmagic.animation.gsap.min.js"></script>
+  <script src="js/debug.addIndicators.min.js"></script>
+
+
+  <script src="js/custom.js"></script>
+
+  <!-- 카카오 -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+
+  const url = 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html';    // <a>태그에서 호출한 함수인 clip 생성
+
+  $( document ).ready(function() {
+      //initKAKAO();
+      initDrawHeart();
+      initWeddingDay();
+      initMapWeddingHall2();
+      initMusic();
+      
+      //크롬이 아닐 경우
+      var agent = window.navigator.userAgent.toLowerCase(); 
+
+      //20250820 임시주석
+      // switch (true){
+      //   case agent.indexOf("edge") > -1:
+      //   $("#btnPlayMusic").trigger("click");
+      //   $("#btnPlayMusic").hide();
+      //   $("#btnPauseMusic").show();
+      //   braek;
+      //   case agent.indexOf("edg/") > -1:
+      //   //$("#btnPlayMusic").trigger("click");
+      //   break;
+      //   case agent.indexOf("chrome") > -1 && !!window.chrome:
+      //   //$("#btnPlayMusic").trigger("click");
+      //   break;
+      //   default:
+      //   $("#btnPlayMusic").trigger("click");
+      //   $("#btnPlayMusic").hide();
+      //   $("#btnPauseMusic").show();
+      //   break;
+      // }
+
+
+      // console.log(agent);
+      // if (agent.indexOf("chrome") > -1 && !!window.chrome) { //
+      //   console.log('this is chrome browser');
+      // }
+      // else{
+      //   console.log('this is not chrome browser');
+      //   $("#btnPlayMusic").trigger("click");
+      // }
+
+      window.addEventListener('load', function () {
+        $(function($) {
+            //$("img.img-fluid").Lazy();
+        });
+      });
+  });
+
+
+
+  var audio = new Audio("./mp3/Taylor Swift_Love Story.mp3");;
+
+  let initMusic = function(){
+    $("#btnPlayMusic").show();
+    audio.load();
+	  audio.volume = 1;
+    audio.autoplay = true;
+
+    document.addEventListener(getVisibilityValue(), handleVisibilityChange, false);
+  }
+
+  let playMusic = function(){
+
+    console.log('playMusic');
+	  audio.play();
+    $("#btnPlayMusic").hide();
+    $("#btnPauseMusic").show();
+  }
+
+  let pauseMusic = function(){
+
+    console.log('pauseMusic');
+    audio.pause();
+    $("#btnPlayMusic").show();
+    $("#btnPauseMusic").hide();
+  }
+
+  function getHiddenValue() {
+    if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+      return "hidden";
+    } else if (typeof document.msHidden !== "undefined") {
+      return "msHidden";
+    } else if (typeof document.webkitHidden !== "undefined") {
+      return "webkitHidden";
+    }
+  }
+
+  function getVisibilityValue() {
+    if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+      return "visibilitychange";
+    } else if (typeof document.msHidden !== "undefined") {
+      return "msvisibilitychange";
+    } else if (typeof document.webkitHidden !== "undefined") {
+      return "webkitvisibilitychange";
+    }
+  }
+  
+  let handleVisibilityChange = function(){
+
+    //console.log('handleVisibilityChange');
+    //console.log($(audio));
+
+    if (document[getHiddenValue()]) {
+      audio.pause();
+      $("#btnPlayMusic").show();
+      $("#btnPauseMusic").hide();
+    } else {
+      // foreground
+      audio.play();
+      $("#btnPlayMusic").hide();
+      $("#btnPauseMusic").show();
+    }
+  }
+
+
+
+  let initWeddingDay = function(){
+
+    let now = moment().format('YYYY-MM-DD'); 
+    let weddingDay = moment('2025-09-06', 'YYYY-MM-DD');
+    //let weddingDay = moment('2022-10-05', 'YYYY-MM-DD');
+    let diffDay = weddingDay.diff(now, 'days');
+
+    $("#weddingDday").text(diffDay == 0 ? "오늘" : diffDay);
+    if(diffDay == 0) $("#weddingDday2").text("");
+  };
+
+  function initMapWeddingHall(){
+
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.5062376254144, 126.885392135733), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    var imageSrc = 'https://sanggeun-suhyang.github.io/wedding-invitation/images/map_wedding_marker.png', // 마커이미지의 주소입니다    
+        imageSize = new kakao.maps.Size(30, 35), // 마커이미지의 크기입니다
+        imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+          
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(37.5062376254144, 126.885392135733); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition, 
+        image: markerImage, // 마커이미지 설정 
+    });
+
+    //마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+}
+
+function initMapWeddingHall2(){
+  var mapContainer = document.getElementById('map2'), // 지도를 표시할 div 
+    mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 주소-좌표 변환 객체를 생성합니다
+var geocoder = new kakao.maps.services.Geocoder();
+
+// 주소로 좌표를 검색합니다
+geocoder.addressSearch('서울 구로구 경인로 624', function(result, status) {
+
+    // 정상적으로 검색이 완료됐으면 
+     if (status === kakao.maps.services.Status.OK) {
+
+        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: coords
+        });
+
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">상근<label style="color:red;">♥</label>수향<br/>결혼식장</div>'
+        });
+        infowindow.open(map, marker);
+
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        map.setCenter(coords);
+    } 
+});    
+  
+}
+
+
+  
+  // SDK 초기화 여부를 판단합니다.
+  console.log(Kakao.isInitialized());
+
+  let moveInvitation = function(){
+    let offset = $("#moveInvitation").offset();
+    console.log(offset);
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveContact = function(){
+    let offset = $("#moveContact").offset();
+    console.log(offset);
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let movePhotoAlbum = function(){
+    let offset = $("#movePhotoAlbum").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+  
+  let moveLoveStory = function(){
+    let offset = $("#moveLoveStory").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let movePoem = function(){
+    let offset = $("#movePoem").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveMap = function(){
+    let offset = $("#moveMap").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveCalendar= function(){
+    let offset = $("#moveCalendar").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveCelebration = function(){
+    let offset = $("#moveCelebration").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let moveHome = function(){
+    let offset = $("#moveHome").offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+  }
+
+  let copyAccount = function(person){
+
+    let account = "";
+    account = $("#" + person).text().trim();
+    var textarea = document.createElement("textarea");  
+    //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
+
+    document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
+    textarea.value = account;  // textarea 값에 url를 넣어줌
+    textarea.select();  //textarea를 설정
+    document.execCommand("copy");   // 복사
+    document.body.removeChild(textarea); //extarea 요소를 없애줌
+    alert("계좌번호가 복사되었습니다.");
+
+  }
+
+  let copyAddress = function(person){
+
+    let address = "경기도 광명시 시청로 70";
+    var textarea = document.createElement("textarea");  
+    //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
+
+    document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
+    textarea.value = address;  // textarea 값에 url를 넣어줌
+    textarea.select();  //textarea를 설정
+    document.execCommand("copy");   // 복사
+    document.body.removeChild(textarea); //extarea 요소를 없애줌
+    alert("주소가 복사되었습니다.");
+
+  }
+
+
+  let copyURL = function(){
+
+    
+    var textarea = document.createElement("textarea");  
+    //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
+
+    document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
+    //url = window.document.location.href;  //url에는 현재 주소값을 넣어줌
+    textarea.value = url;  // textarea 값에 url를 넣어줌
+    textarea.select();  //textarea를 설정
+    document.execCommand("copy");   // 복사
+    document.body.removeChild(textarea); //extarea 요소를 없애줌
+    alert("청첩장 주소가 복사되었습니다.");
+  }
+
+  let initKAKAO = function(){
+      // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+     Kakao.init('c3f032518f57e515c1fdcb4b23b75cad');
+  }
+
+  let shareKAKAO = function(){
+
+    //alert("카카오톡 공유");
+
+    Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '상근♥수향 모바일 청첩장',
+          description: '최상근 정수향 결혼식에 초대합니다.',
+          imageUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/images/final/invitation.jpg',
+          link: {
+            mobileWebUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html',
+            webUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html',
+          },
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              mobileWebUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html',
+              webUrl: 'https://sanggeun-suhyang.github.io/wedding-invitation/index.html',
+            },
+          },
+        ],
+        // 카카오톡 미설치 시 카카오톡 설치 경로이동
+        installTalk: true,
+      })
+  }
+
+  let initDrawHeart = function(){
+
+    console.log('initDrawHeart');
+
+    var c = document.getElementsByTagName('canvas')[0];
+    var b = document.body;
+    var a = c.getContext('2d');
+    // c.width = c.parentElement.width-800;
+    // c.height = c.parentElement.height;
+    
+    var n=Math.pow, 
+        i,
+        E=2,
+        F="rgb(255, 0, 0,",
+        d=Math.cos,
+        z=Math.sin,
+        L=1,
+        u=12,
+        W=window,
+        w=c.width=window.innerWidth -20,
+        h=c.height=window.innerHeight,
+        r=function(){
+          return Math.random()*2-1
+        },
+        y="px Hi Melody",
+        v="♡",
+        X=w/2,
+        Y=h/4,
+        T=4,
+        p=function(){
+            var e=this;
+            e.g=function(){
+              e.x=X;
+              e.y=Y;
+              e.k=0;
+              e.l=0;
+              e.t=Math.random()*19000;
+              e.c=e.t
+            };
+            e.d=function(){
+              a.fillStyle=F+(e.c/e.t)+")";
+              a.fillText(v,e.x,e.y);
+              e.c-=50;
+              e.x+=e.k;
+              e.y+=e.l;
+              e.k=e.k+r();
+              e.l=e.l+r();
+              if(e.c<0||e.x>w||e.x<0||e.y>h||e.y<0){
+                e.g();
+              }
+            };
+            e.g();
+          },
+          A,
+          B;
+          a.textAlign="center";
+          a.strokeStyle="#FFF";
+          a.lineWidth=1;
+          for(i=0;i<350;i++){
+            Math[i]=new p()
+          }
+          
+          setInterval(function(){
+            a.clearRect(0,0,w,h);
+            a.font=u+y;
+            // X=(w/6*n(z(T),3)+w/2);
+            // Y=0.8*(-h/40*(13*d(T)-5*d(2*T)-2*d(3*T)-d(4*T))+h/2.3);
+
+            X = (w/10 * n(z(T),3) + w/2);   // 좌우 크기 줄이기
+            Y = 0.8 * (-h/60 * (13*d(T)-5*d(2*T)-2*d(3*T)-d(4*T)) + h/4);  // 상하 크기 줄이기
+
+            T+=(z(T)+3)/99;
+            
+            for(i=0;i<350;i++){
+              with(Math[i]){A=(x/w-0.5)*2,B=-(y/h-0.5);
+                if(L&&(A*A+2*n((B-0.5*n(Math.abs(A),0.5)),2))>0.11){k=l=0}d()
+              }
+            }
+            a.font=60+y;
+            
+            if(E>0.1){
+              if(E<1){
+                a.fillStyle=F+E+")";
+                //a.fillText("Click",w/2,h/2)
+              }
+              E-=0.02
+            }
+            
+            a.fillStyle="#FF0000";
+            a.fillText(v,X,Y+u);
+            a.strokeText(v,X,Y+u)
+          }, 60);
+            
+            
+            b.bgColor="#FFEFF2";
+            // c.onmouseup=function(){
+              
+            // }
+
+            L=(L)?0:1
+
+    
+    //eval('var M=Math,n=M.pow,i,E=2,F="rgba(233,61,109,",d=M.cos,z=M.sin,L=1,u=30,W=window,w=c.width=W.innerWidth,h=c.height=W.innerHeight,r=_1){return M.random()*2-1},y="px Arial",v="♥",X=w/2,Y=h/2,T=4,p=_1){var e=this;e.g=_1){e.x=X;e.y=Y;e.k=0;e.l=0;e.t=M.random()*19000;e.c=e.t};e.d=_1){a.fillStyle=F+(e.c/e.t)+")";a.fillText(v,e.x,e.y);e.c-=50;e.x+=e.k;e.y+=e.l;e.k=e.k+r();e.l=e.l+r();if(e.c<0||e.x>w||e.x<0||e.y>h||e.y<0){e.g()}};e.g()},A,B;a.textAlign="center";a.strokeStyle="#000";a.lineWidth=2;for(i=0;i<350;i++){M[i]=new p()}setInterval(_1){a.clearRect(0,0,w,h);a.font=u+y;X=(w/6*n(z(T),3)+w/2);Y=0.8*(-h/40*(13*d(T)-5*d(2*T)-2*d(3*T)-d(4*T))+h/2.3);T+=(z(T)+3)/99;for(i=0;i<350;i++){with(M[i]){A=(x/w-0.5)*2,B=-(y/h-0.5);if(L&&(A*A+2*n((B-0.5*n(M.abs(A),0.5)),2))>0.11){k=l=0}d()}}a.font=120+y;if(E>0.1){if(E<1){a.fillStyle=F+E+")";a.fillText("Click",w/2,h/2)}E-=0.02}a.fillStyle="#E93D6D";a.fillText(v,X,Y+u);a.strokeText(v,X,Y+u)},50);b.bgColor="#FFEFF2";c.onmouseup=_1){L=(L)?0:1}'.replace(/(_1)/g,'function('))
+  }
+
+  </script>
+</body>
+</html>
